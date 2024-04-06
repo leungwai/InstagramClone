@@ -16,7 +16,7 @@ Page is viewable and hosted via [GitHub Pages](https://leungwai.github.io/Instag
 ### Screenshot
 ![Screenshot of the Instagram clone webpage by leungwai](/screenshot.png)
 
-### To Improve
+### To Improve for V2
 - [ ] Improve the spacing between icon and text in search bar
 - [ ] Further round corners to update to Instagram's current standards 
 
