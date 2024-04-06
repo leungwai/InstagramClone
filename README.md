@@ -13,6 +13,13 @@ Project from Intro to Web Dev class that imitates the design of the Instagram ho
 
 Page is viewable and hosted via [GitHub Pages](https://leungwai.github.io/InstagramClone)
 
+### Screenshot
+![Screenshot of the Instagram clone webpage by leungwai](/screenshot.png)
+
+### To Improve
+- [ ] Improve the spacing between icon and text in search bar
+- [ ] Further round corners to update to Instagram's current standards 
+
 ### Sources and Attributes
 - FontAwesome for all the icons used in the project
 
