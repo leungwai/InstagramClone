@@ -1,0 +1,670 @@
+body {
+    background-color: rgb(250,250,250);
+}
+
+/* Fixed header bar */
+
+/* Left side of header bar */
+.header-bar {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid;
+    border-color: rgba(234, 234, 234);
+    z-index: 100;
+}
+
+.header-bar #header-left {
+    height: 60px;
+    padding-left: 10%;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .header-bar #header-left {
+        padding-left: 5%;
+    }
+
+}
+
+.header-bar #instagram-icon-button {
+    float: left;
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header-bar #instagram-logo-button {
+    float: left;
+    margin-left: 10px;
+    margin-top: 16px;
+    padding-left: 10px;
+    padding-top: 3px;
+    border-left: 1px solid rgb(155,155,155);
+}
+
+@media (max-width: 767px) {
+    .header-bar #instagram-logo-button {
+        visibility: hidden;
+        height: 100%;
+    }
+
+}
+
+/* Center of header bar */
+.header-bar form{
+    display: inline-block;
+    height: 25px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
+}
+
+@media (max-width: 767px) {
+    .header-bar form {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+}
+
+/* Learned to put image inside search field using "background" declaration from Lecture 8 
+    and from the CSE 204A Piazza post: https://piazza.com/class/kk1jy7fehy47aj?cid=187 */
+.header-bar #header-center input {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid rgba(128,128,128,0.45);
+    border-radius: 4px;
+    text-align:center;
+    font-size: 90%;
+
+    background: url("fontawesome-free-5.15.2-web/svgs/solid/search.svg") no-repeat center;
+    background-size: 12px;
+    background-position-x: 25%;
+    background-position-y: 55%;
+    background-color: rgba(250, 250, 250, 0.75);
+}
+
+@media (max-width: 991px) {
+    .header-bar #header-center input {
+        background-position-x: 15%;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .header-bar #header-center input {
+        background-position-x: 5%;
+    }
+
+}
+
+.header-bar #header-center input:focus-visible {
+    background-color: white;
+    background: none;
+}
+
+/* Right side of header bar */
+.header-bar #header-right {
+    padding-right: 10%;
+}
+
+.header-bar #header-right-icons {
+    float: right;
+    width: 180px;
+    margin-right: 0%;
+}
+
+.header-bar #header-right-icons input {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-left: 30px;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
+}
+
+@media (max-width: 767px) {
+    .header-bar #header-right {
+        padding-right: 5%;
+    }
+
+    .header-bar #header-right-icons {
+        float: right;
+        width: 120px;
+        margin-right: 0%;
+    }
+
+    .header-bar #header-right-icons input {
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+
+}
+
+/* Main Column Content */
+.content {
+    position: absolute;
+    margin-top: 90px; 
+    width: 100%;
+}
+
+.content #main-column{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (min-width: 767px){
+    .content #main-column{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+}
+
+
+/* For posts */
+.post {
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 30px;
+    border: 2px solid rgb(230,230,230);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.post-username {
+    height: 50px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgba(239,239,239);
+}
+
+.post-username input{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius:15px;
+}
+
+.post-username a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.post-username a:hover{
+    color:gray;
+}
+
+.post-picture img {
+    width: 100%;
+}
+
+.post-buttons {
+    height: 40px;
+    width: 100%;
+}
+
+.post-buttons .like, .post-buttons .comment, 
+.post-buttons .share {
+    display: inline;
+    height: 25px;
+    width: 25px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    margin-left: 12px;
+    margin-right: 8px; 
+    
+}
+
+.post-buttons .bookmark {
+    display: inline;
+    float: right;
+    height: 25px;
+    width: 25px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    margin-right: 12px; 
+}
+
+.post-comments .num-likes {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 12px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post-comments .num-likes:hover {
+    color: gray;
+}
+
+.post-comments .poster-caption {
+    overflow-x: scroll;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 3px;
+    margin-left:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.poster-caption .poster-username {
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post-comments .poster-username:hover {
+    color: gray;
+}
+
+.post-comments .user-comment {
+    overflow-x: scroll;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 3px;
+    margin-left:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.user-comment .comment-username {
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.user-comment .comment-username:hover {
+    color: gray;
+}
+
+.post-comments .time {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(239,239,239);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(153,153,153);
+}
+
+.post-add-comment input{
+    display: inline-block;
+    width: 85%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left:0px;
+    border: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    color: rgb(127,127,127);
+}
+
+.post-add-comment input:focus {
+    color: black;
+}
+
+.post-add-comment .ellipsis {
+    position: relative;
+    float: right;
+    width: 5%;
+    height: 100%;
+    margin-top: 6px;
+    margin-right: 12px;
+    padding-top:0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/* Suggestions For You section */
+.suggestions {
+    height: 300px;
+    margin-bottom: 30px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid rgb(230,230,230);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.content .suggestions-header {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.suggestions-header #suggestions-title {
+    display: inline;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(150,150,150);
+}
+
+.suggestions-header #suggestions-see-all {
+    display: inline;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(33,155,234);
+    text-decoration: none;
+}
+
+.suggestions-header #suggestions-see-all:hover {
+    color: blue;
+}
+
+/* CSS Flexbox is used to handle the alignment of the individual profiles */
+
+/* Learned how to use overflow for horizontal scroll by using the key "overflow-x"
+from  https://www.w3schools.com/cssref/css3_pr_overflow-x.asp */
+/* Learned more about CSS Flexbox from https://www.w3schools.com/css/css3_flexbox_items.asp#flex-basis 
+(particularly with the "flex-direction" and "nowrap" rules/values) */
+.suggestions .suggested-profiles-section{
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 210px;
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.suggested-profiles-section .suggested-profile {
+    height: 100%;
+    width: 180px;
+    margin-right: 20px;
+    border: 2px solid rgb(230,230,230);
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.suggested-profile .top-part {
+    height: 70px;
+    width: 140px;
+}
+
+.top-part .suggested-logo {
+    position: relative;
+    display: inline;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 45px;
+    border: 1px solid rgb(153,153,153);
+    border-radius: 25px;
+}
+
+.top-part .suggested-close {
+    position: relative;
+    float: right;
+    height: 20px;
+    width: 20px;
+}
+
+.middle-part a {
+    display: block;
+    height: 25px;
+    width: 100%;
+    color: rgb(25, 25, 25);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.middle-part a:hover {
+    color: gray;
+}
+
+.middle-part .verify-badge {
+    display: inline;
+    height: 15px;
+    width: 15px;
+    margin-top: -1px;
+    margin-left: 5px;
+}
+
+.middle-part p {
+    height: 20px;
+    width: 100%;
+    color: rgb(156,156,156);
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.bottom-part input{
+    display: inline;
+    height: 30px;
+    width: 100%;
+    margin-top: 5px;
+    border: 0px;
+    border-radius: 3px;
+    background-color: rgb(45, 153, 233);
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.bottom-part input:hover {
+    background-color: rgb(142, 195, 236);
+}
+
+
+/* Sidebar */
+#sidebar {
+    /* border: 1px solid red; */
+    margin-left: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Sidebar is completely hidden when in tablet/phone mode */
+@media (max-width: 991px){
+    #sidebar {
+        display: none;
+    }
+}
+
+
+/* For Default Profile */
+.default-profile {
+    height: 60px;
+    width: 100%;
+    border-bottom: 2px solid rgb(230,230,230);
+}
+
+.default-profile .default-profile-image {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    border-radius: 25px;
+}
+
+.default-profile .default-profile-username {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.default-profile .default-profile-username:hover {
+    color: gray;
+}
+
+.default-profile .default-profile-name {
+    float: left;
+    width: 50%;
+    margin-left: 15px;
+    font-size: 12px;
+    color: rgb(153,153,153);
+}
+
+
+/* For Stories */ 
+.stories-heading {
+    border: 1px solid rgb(250,250,250);
+    height: 50px;
+    width: 100%;
+    margin-top: 1px;
+}
+
+.stories-heading p {
+    display: inline-block;
+    margin-top: 12px;
+    color: rgb(153,153,153);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.stories-heading a {
+    float: right;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.stories-heading a:hover {
+    color: gray;
+}
+
+.stories-profiles {
+    overflow: scroll;
+    height: 325px;
+    width: 100%;
+    margin-left:0px;
+    margin-right: 0px;
+    border-bottom: 2px solid rgb(230,230,230);
+}
+
+.stories-profiles .individual-profiles {
+    display: block;
+    height: 70px;
+    width: 100%;
+}
+
+.individual-profiles .stories-profiles-images {
+    float: left;
+    height: 56px;
+    width: 56px;
+    margin-top:7px;
+    border: 3px solid rgb(239,89,86);
+    padding: 2px 2px 2px 2px;
+    border-radius: 28px;
+}
+
+.individual-profiles .stories-profile-username {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    margin-top: 12px;
+    margin-left: 11px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.individual-profiles .stories-profile-username:hover {
+    color: gray;
+}
+
+.individual-profiles .stories-profile-time {
+    float: left;
+    width: 50%;
+    margin-left: 11px;
+    font-size: 12px;
+    color: rgb(153,153,153);
+    text-transform: uppercase;
+}
+
+
+/* For Footer */
+#sidebar .footer{
+    height: 200px;
+    width: 100%;
+    margin-top: 1px;
+}
+
+.footer a{
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer a:active{
+    text-decoration: underline;
+    color: black;
+}
+
+.footer ul {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.footer li {
+    display: inline;
+}
+
+.footer .dot-separator {
+    display: inline;
+    height: 3px;
+    width: 3px;
+    margin-left:1px;
+    margin-right: 1px;
+}
+
+.footer p {
+    padding-top: 5px;
+    padding-left: 5px;
+    color: rgb(190,190,190);
+    font-size: 12px;
+}

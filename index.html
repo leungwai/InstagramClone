@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>(Fake) Instagram</title>
+    <meta name="description" content="Fake Instagram" />
+
+    <!-- As TAs are using Dev Tools to emulate different device widths, I learned to 
+    fix the issue of responsive scaling not working on Dev Tools (even when it works from dragging 
+    the window) from https://stackoverflow.com/questions/46972711/responsive-design-not-working-chrome-dev-tool-but-browser-does -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap Framework Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+    <!-- All icons used (except when specified) are from FontAwesome-->
+
+    <!-- Regular CSS Stylesheet-->
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header bar -->
+    <div class="header-bar">
+        <div class="row">
+
+            <div id="header-left" class="col-4">
+                <input type="image" id="instagram-icon-button"
+                    src="fontawesome-free-5.15.2-web/svgs/brands/instagram.svg" alt="instagram-icon-button">
+                <!-- Instagram logo is from Instagram's website, allowed by Professor Clapp -->
+                <input type="image" id="instagram-logo-button" src="instagram-logo.png" alt="instagram-logo-button">
+            </div>
+
+            <div id="header-center" class="col-4">
+                <form>
+                    <input type="search" placeholder="Search">
+                </form>
+
+            </div>
+
+            <div id="header-right" class="col-4">
+                <div id="header-right-icons">
+                    <input type="image" src="fontawesome-free-5.15.2-web/svgs/regular/compass.svg" alt="compass">
+                    <input type="image" src="fontawesome-free-5.15.2-web/svgs/regular/heart.svg" alt="heart">
+                    <input type="image" src="fontawesome-free-5.15.2-web/svgs/regular/user.svg" alt="user">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- For content -->
+    <div class="content">
+        <div class="row justify-content-center">
+            <div id="main-column" class="col-md-8 col-lg-6">
+
+                <!-- First post -->
+                <div class="post" id="first-post">
+                    <div class="post-username">
+                        <!-- Image source: https://www.youtube.com/watch?v=MPV2METPeJU -->
+                        <input type="image" src="dog.jpeg" alt="dog-username">
+                        <a href="#">helloimdog</a>
+                    </div>
+
+                    <div class="post-picture">
+                        <img src="dogpost.jpeg" alt="dog-post-picture">
+                    </div>
+
+                    <div class="post-buttons">
+                        <input type="image" class="like" src="fontawesome-free-5.15.2-web/svgs/regular/heart.svg"
+                            alt="like">
+                        <input type="image" class="comment" src="fontawesome-free-5.15.2-web/svgs/regular/comment.svg"
+                            alt="comment">
+                        <input type="image" class="share"
+                            src="fontawesome-free-5.15.2-web/svgs/regular/share-square.svg" alt="share">
+                        <input type="image" class="bookmark" src="fontawesome-free-5.15.2-web/svgs/regular/bookmark.svg"
+                            alt="bookmark">
+                    </div>
+
+                    <div class="post-comments">
+                        <a class="num-likes" href="#">11 likes</a>
+                        <p class="poster-caption"> <a class="poster-username" href="#">helloimdog</a> The weather is
+                            great outside!</p>
+                        <p class="user-comment"> <a class="comment-username" href="#">thisisflowers</a> I agree!</p>
+                        <p class="user-comment"> <a class="comment-username" href="#">some.username</a> Yup!</p>
+                        <p class="time">3 hours ago</p>
+                    </div>
+
+                    <div class="post-add-comment">
+                        <input type="text" placeholder="Add a comment...">
+                        <input type="image" class="ellipsis" src="fontawesome-free-5.15.2-web/svgs/solid/ellipsis-h.svg"
+                            alt="ellipsis" />
+                    </div>
+                </div>
+
+
+                <!-- Second post-->
+                <div class="post" id="second-post">
+                    <div class="post-username">
+                        <!-- Image source: https://newyork.cbslocal.com/top-lists/flowers-new-york-city-best-places-to-buy/ -->
+                        <input type="image" src="flowers.jpeg" alt="flowers-username">
+                        <a href="#">thisisflowers</a>
+                    </div>
+
+                    <div class="post-picture">
+                        <!-- Image source: https://www.housebeautiful.com/lifestyle/gardening/g13074130/beautiful-flower-images/ -->
+                        <img src="flowerpost.jpeg" alt="flower-post-picture">
+                    </div>
+
+                    <div class="post-buttons">
+                        <input type="image" class="like" src="fontawesome-free-5.15.2-web/svgs/regular/heart.svg"
+                            alt="like">
+                        <input type="image" class="comment" src="fontawesome-free-5.15.2-web/svgs/regular/comment.svg"
+                            alt="comment">
+                        <input type="image" class="share"
+                            src="fontawesome-free-5.15.2-web/svgs/regular/share-square.svg" alt="share">
+                        <input type="image" class="bookmark" src="fontawesome-free-5.15.2-web/svgs/regular/bookmark.svg"
+                            alt="bookmark">
+                    </div>
+
+                    <div class="post-comments">
+                        <p class="num-likes">10 likes</p>
+                        <p class="poster-caption"> <a class="poster-username" href="#">thisisflowers</a> Weather is
+                            awesome today as well!</p>
+                        <p class="user-comment"> <a class="comment-username" href="#">helloimdog</a> I agree!</p>
+                        <p class="user-comment"> <a class="comment-username" href="#">some.username</a> Yup!</p>
+                        <p class="time">5 hours ago</p>
+                    </div>
+
+                    <div class="post-add-comment">
+                        <input type="text" placeholder="Add a comment...">
+                        <input type="image" class="ellipsis" src="fontawesome-free-5.15.2-web/svgs/solid/ellipsis-h.svg"
+                            alt="ellipsis" />
+                    </div>
+                </div>
+
+
+                <!-- Suggestions For You section -->
+                <div class="suggestions">
+                    <div class="suggestions-header">
+                        <p id="suggestions-title">Suggestions for You</p>
+                        <a href="#" id="suggestions-see-all">See All</a>
+                    </div>
+
+                    <!-- CSS Flexbox is used to handle the alignment of the individual profiles -->
+                    <div class="suggested-profiles-section">
+                        <!-- Individual profiles -->
+                        <div class="suggested-profile" id="profile-1">
+
+                            <div class="top-part">
+                                <!-- Source of Apple logo image: https://brandeps.com/logo/A/Apple-01 -->
+                                <input type="image" class="suggested-logo" src="apple-logo.png" alt="apple">
+                                <input type="image" class="suggested-close"
+                                    src="fontawesome-free-5.15.2-web/svgs/regular/window-close.svg"
+                                    alt="suggested-close">
+                            </div>
+
+                            <div class="middle-part">
+                                <a class="suggested-profile-name" href="#">Apple Inc.<img class="verify-badge"
+                                        src="fontawesome-free-5.15.2-web/svgs/solid/check-circle.svg"
+                                        alt="verified"></a>
+                                <p class="suggested-followed-by">Popular</p>
+                            </div>
+
+                            <div class="bottom-part">
+                                <input type="submit" value="Follow" />
+                            </div>
+                        </div>
+
+                        <div class="suggested-profile" id="profile-2">
+
+                            <div class="top-part">
+                                <!-- Source of Microsoft logo image: https://news.microsoft.com/resourcespage/ -->
+                                <input type="image" class="suggested-logo" src="microsoft-logo.png" alt="microsoft">
+                                <input type="image" class="suggested-close"
+                                    src="fontawesome-free-5.15.2-web/svgs/regular/window-close.svg"
+                                    alt="suggested-close">
+                            </div>
+
+                            <div class="middle-part">
+                                <a class="suggested-profile-name" href="#">Microsoft<img class="verify-badge"
+                                        src="fontawesome-free-5.15.2-web/svgs/solid/check-circle.svg"
+                                        alt="verified"></a>
+                                <p class="suggested-followed-by">Followed by helloimdog</p>
+                            </div>
+
+                            <div class="bottom-part">
+                                <input type="submit" value="Follow" />
+                            </div>
+                        </div>
+
+                        <div class="suggested-profile" id="profile-3">
+
+                            <div class="top-part">
+                                <!-- Source of Google logo image: https://commons.wikimedia.org/wiki/File:Google_%22G%22_Logo.svg -->
+                                <input type="image" class="suggested-logo" src="google-logo.png" alt="google">
+                                <input type="image" class="suggested-close"
+                                    src="fontawesome-free-5.15.2-web/svgs/regular/window-close.svg"
+                                    alt="suggested-close">
+                            </div>
+
+                            <div class="middle-part">
+                                <a class="suggested-profile-name" href="#">Google<img class="verify-badge"
+                                        src="fontawesome-free-5.15.2-web/svgs/solid/check-circle.svg"
+                                        alt="verified"></a>
+                                <p class="suggested-followed-by">Followed by thisisflowers</p>
+                            </div>
+
+                            <div class="bottom-part">
+                                <input type="submit" value="Follow" />
+                            </div>
+                        </div>
+
+                        <div class="suggested-profile" id="profile-4">
+
+                            <div class="top-part">
+                                <!-- Source of Amazon logo image: www.amazon.com -->
+                                <input type="image" class="suggested-logo" src="amazon-logo.png" alt="amazon">
+                                <input type="image" class="suggested-close"
+                                    src="fontawesome-free-5.15.2-web/svgs/regular/window-close.svg"
+                                    alt="suggested-close">
+                            </div>
+
+                            <div class="middle-part">
+                                <a class="suggested-profile-name" href="#">Amazon<img class="verify-badge"
+                                        src="fontawesome-free-5.15.2-web/svgs/solid/check-circle.svg"
+                                        alt="verified"></a>
+                                <p class="suggested-followed-by">Followed by multiple followers</p>
+                            </div>
+
+                            <div class="bottom-part">
+                                <input type="submit" value="Follow" />
+                            </div>
+                        </div>
+
+                        <div class="suggested-profile" id="profile-5">
+
+                            <div class="top-part">
+                                <!-- Source of Instagram logo image: https://www.theguardian.com/technology/2016/may/11/instagram-new-logo-photo-sharing-app -->
+                                <input type="image" class="suggested-logo" src="instagram-new-logo.jpeg"
+                                    alt="instagram">
+                                <input type="image" class="suggested-close"
+                                    src="fontawesome-free-5.15.2-web/svgs/regular/window-close.svg"
+                                    alt="suggested-close">
+                            </div>
+
+                            <div class="middle-part">
+                                <a class="suggested-profile-name" href="#">Instagram<img class="verify-badge"
+                                        src="fontawesome-free-5.15.2-web/svgs/solid/check-circle.svg"
+                                        alt="verified"></a>
+                                <p class="suggested-followed-by">Popular</p>
+                            </div>
+
+                            <div class="bottom-part">
+                                <input type="submit" value="Follow" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="sidebar" class="col-lg-3 col-md-4">
+                <div class="default-profile">
+                    <input type="image" class="default-profile-image" src="washu.jpeg" alt="washu" />
+                    <a class="default-profile-username" href="#">some.username</a>
+                    <p class="default-profile-name">Some Name</p>
+                </div>
+
+                <div class="stories-heading">
+                    <p>Stories</p>
+                    <a href="#">Watch All</a>
+                </div>
+
+                <div class="stories-profiles">
+                    <div class="individual-profiles">
+                        <input type="image" class="stories-profiles-images" src="dog.jpeg" alt="dog-logo" />
+                        <a class="stories-profile-username" href="#">stories.username</a>
+                        <p class="stories-profile-time">3 hours ago</p>
+                    </div>
+
+                    <div class="individual-profiles">
+                        <input type="image" class="stories-profiles-images" src="apple-logo.png" alt="apple-logo" />
+                        <a class="stories-profile-username" href="#">appleinc_</a>
+                        <p class="stories-profile-time">4 hours ago</p>
+                    </div>
+
+                    <div class="individual-profiles">
+                        <input type="image" class="stories-profiles-images" src="microsoft-logo.png"
+                            alt="microsoft-logo" />
+                        <a class="stories-profile-username" href="#">microsoft</a>
+                        <p class="stories-profile-time">5 hours ago</p>
+                    </div>
+
+                    <div class="individual-profiles">
+                        <input type="image" class="stories-profiles-images" src="google-logo.png" alt="google-logo" />
+                        <a class="stories-profile-username" href="#">google</a>
+                        <p class="stories-profile-time">6 hours ago</p>
+                    </div>
+
+                    <div class="individual-profiles">
+                        <input type="image" class="stories-profiles-images" src="amazon-logo.png" alt="amazon-logo" />
+                        <a class="stories-profile-username" href="#">amazon.inc</a>
+                        <p class="stories-profile-time">7 hours ago</p>
+                    </div>
+
+                    <div class="individual-profiles">
+                        <input type="image" class="stories-profiles-images" src="instagram-new-logo.jpeg"
+                            alt="instagram-new-logo" />
+                        <a class="stories-profile-username" href="#">instagram</a>
+                        <p class="stories-profile-time">8 hours ago</p>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <ul>
+                        <li><a id="footer-first" href="#">About Us</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Support</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Press</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">API</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Jobs</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Privacy</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Terms</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Directory</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Profiles</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Hashtags</a></li>
+                        <li><img class="dot-separator" src="fontawesome-free-5.15.2-web/svgs/solid/circle.svg"
+                                alt="dot"> <a href="#">Language</a></li>
+                    </ul>
+
+                    <p>© 2021 FAKE INSTAGRAM by Leung Wai</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
