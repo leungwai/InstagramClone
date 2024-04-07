@@ -1,8 +1,8 @@
 # 📸 InstagramClone 
 
-_\#HTML \#CSS \#Bootstrap_
-
 Project from Intro to Web Dev class that imitates the design of the Instagram home page (c. 2021) using HTML and CSS. 
+
+_\#HTML \#CSS \#Bootstrap_
 
 ## This Project Showcases: 
 - 💻 Use of **HTML** and **CSS** for page creation and decoration
