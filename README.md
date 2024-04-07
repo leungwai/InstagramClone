@@ -4,7 +4,7 @@ _\#HTML \#CSS \#Bootstrap_
 
 Project from Intro to Web Dev class that imitates the design of the Instagram home page (c. 2021) using HTML and CSS. 
 
-## This project showcases: 
+## This Project Showcases: 
 - 💻 Use of **HTML** and **CSS** for page creation and decoration
 - 🎉 Use of **Bootstrap** for grid alignment for the various panels and posts
 - 🔍 Attention to detail for spacing for various elements to keep true to the true Instagram post
